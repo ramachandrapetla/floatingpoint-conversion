@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: #2c3034;
+    font-weight: 700;
+    padding: 0!important;
+}
+
+.navbar__title {
+    margin-right: auto;
+    font-size: 150%;
+    padding: 12px 16px;
+    color: #ea4c89;
+}
+
+.navbar__item {
+    padding: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.menu-item a {
+    text-decoration: none;
+    color: #0d6efd;
+}
+.menu-item a:hover {
+    color: #ea4c89;
+}
+.menu-item.active a {
+    color: #ea4c89;
+    border-top: 5px solid #0d6efd;
+}
+

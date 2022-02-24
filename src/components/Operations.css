@@ -1,0 +1,80 @@
+.format {
+    display:flex;
+    padding: 10px;
+}
+
+.formulaBox {
+    box-shadow: rgba(234, 76, 137, 0.2) 0px 7px 29px 0px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+
+}
+
+.input-container .format, .input-container .input{
+    flex-direction: column;
+}
+
+.input-container .format {
+    flex-basis: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.input-container .input  * {
+    width: 100%;
+}
+
+.container {
+    padding:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.input {
+    display: flex;
+    width:75%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.output {
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.outputformat {
+    display: flex;
+    padding: 10px;
+}
+
+.btn-custom {
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: rgba(234, 76, 137);
+}
+
+.error-container {
+    margin: 50px 0px;
+    padding: 20px 40px;
+    border: 2px solid red;
+    position:relative;
+}
+.error-message {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: red;
+}
+.error-logo {
+    font-size: x-large;
+}
+
