@@ -49,8 +49,8 @@ the same format):
 
 Team Members:
 =============
-Ramachandra Petla
-Vivek Kukkapalli
-Aravind Reddy Yakasi
-Dinesh
+1. Ramachandra Petla
+2. Vivek Kukkapalli
+3. Aravind Reddy Yakasi
+4. Dinesh
 
