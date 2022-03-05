@@ -52,5 +52,5 @@ Team Members:
 1. Ramachandra Petla
 2. Vivek Kukkapalli
 3. Aravind Reddy Yakasi
-4. Dinesh
+4. Dinesh Reddy mallu
 
