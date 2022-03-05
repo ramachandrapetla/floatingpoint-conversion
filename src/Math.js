@@ -770,45 +770,10 @@ function ieee(Size) {
 }
 
 export function float2Hex(d) {
-    var sign = "0";
-    d = (typeof (d) === 'string') ? parseFloat(d) : d;
-    if (d < 0.0) {
-        sign = "1";
-        d = -d;
-    }
-
-    var mantissa = parseFloat(d).toString(2);
-
-    var exponent = 0;
-
-    if (mantissa.substr(0, 1) === "0") {
-        exponent = mantissa.indexOf('.') - mantissa.indexOf('1') + 127;
-    }
-    else {
-        exponent = mantissa.indexOf('.') - 1 + 127;
-    }
-
-    mantissa = mantissa.replace(".", "");
-    mantissa = mantissa.substr(mantissa.indexOf('1') + 1);
-
-    if (mantissa.length > 23) {
-        mantissa = mantissa.substr(0, 23);
-    }
-    else {
-        while (mantissa.length < 23) {
-            mantissa = mantissa + "0";
-        }
-    }
-
-    var exp = parseFloat(exponent).toString(2);
-
-    while (exp.length < 8) {
-        exp = "0" + exp;
-    }
-
-    var numberFull = sign + exp + mantissa;
-
-    return parseInt(numberFull, 2).toString(16);
+    const getHex = i => ('00' + i.toString(16)).slice(-2);
+    var view = new DataView(new ArrayBuffer(4))
+    view.setFloat32(0, d);
+    return Array.apply(null, { length: 4 }).map((_, i) => getHex(view.getUint8(i))).join('');
 }
 
 export function float2ieee754(input) {
