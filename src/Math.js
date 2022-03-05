@@ -812,51 +812,19 @@ export function float2Hex(d) {
 }
 
 export function float2ieee754(input) {
-    /*
-      in this javascript program, bit positions are numbered
-      0 ~ 32/64 from left to right instead of right to left, the
-      way the output is presented
-    */
     input = (typeof (input) !== 'string') ? input.toString() : input;
     let ieee32 = new ieee(32)
     let ieee64 = new ieee(64)
     let rounding = true;
     var index1, cnst
 
-    //   input = obj.input.value
     input = RemoveBlanks(input)
 
     ieee64.Dec2Bin(input)
     ieee64.BinString =
         ieee64.Convert2Bin(ieee64.DispStr, ieee64.StatCond64, ieee64.Result[0],
             ieee64.BinaryPower, false)
-    //   obj.bin64_0.value = ieee64.BinString.substring(0, 1)
-    //   obj.bin64_1.value = ieee64.BinString.substring(1, 12)
-    //   if ((ieee64.BinaryPower < ieee64.MinExp) ||
-    //       (ieee64.BinaryPower > ieee64.MaxExp))
-    //   {
-    //     obj.bin64_12.value = "  "
-    //     obj.bin64_12.value += ieee64.BinString.substring(12, 13)
-    //     obj.bin64_12.value += "."
-    //     obj.bin64_12.value += ieee64.BinString.substring(13, 64)
-    //   }
-    //   else
-    //   {
-    //     obj.bin64_12.value = "1 ."
-    //     obj.bin64_12.value += ieee64.BinString.substring(12, 64)
-    //   }
-    //   obj.stat64.value = ieee64.StatCond
-    //   obj.binpwr64.value = ieee64.BinaryPower
-    //   obj.binpwr64f.value = ieee64.BinaryPower + ieee64.ExpBias
-    //   obj.dec64sig.value = ieee64.Convert2Dec()
-    //   if (ieee64.DispStr !== "")
-    //   {
-    //     obj.dec64.value = ieee64.DispStr
-    //     obj.dec64sig.value = ""
-    //   }
-    //   else
-    //     obj.dec64.value = ieee64.DecValue
-    //   obj.hex64.value = ieee64.Convert2Hex()
+
 
     cnst = 2102         // 1 (carry bit) + 1023 + 1 + 1022 + 53 + 2 (round bits)
     for (index1 = 0; index1 < cnst; index1++)
@@ -865,38 +833,7 @@ export function float2ieee754(input) {
     ieee32.BinString =
         ieee32.Convert2Bin(ieee64.DispStr, ieee64.StatCond64, ieee64.Result[0],
             ieee64.BinaryPower, rounding)
-    //   obj.bin32_0.value = ieee32.BinString.substring(0, 1)
-    //   obj.bin32_1.value = ieee32.BinString.substring(1, 9)
-    //   if ((ieee32.BinaryPower < ieee32.MinExp) ||
-    //       (ieee32.BinaryPower > ieee32.MaxExp))
-    //   {
-    //     obj.bin32_9.value = "  "
-    //     obj.bin32_9.value += ieee32.BinString.substring(9, 10)
-    //     obj.bin32_9.value += "."
-    //     obj.bin32_9.value += ieee32.BinString.substring(10, 32)
-    //   }
-    //   else
-    //   {
-    //     obj.bin32_9.value = "1 ."
-    //     obj.bin32_9.value += ieee32.BinString.substring(9, 32)
-    //   }
-    //   obj.stat32.value = ieee32.StatCond
-    //   obj.binpwr32.value = ieee32.BinaryPower
-    //   obj.binpwr32f.value = ieee32.BinaryPower + ieee32.ExpBias
-    //   obj.dec32sig.value = ieee32.Convert2Dec()
-    //   if (ieee32.DispStr !== "")
-    //   {
-    //     obj.dec32.value = ieee32.DispStr
-    //     obj.dec32sig.value = ""
-    //   }
-    //   else
-    //     obj.dec32.value = ieee32.DecValue
-    //   obj.hex32.value = ieee32.Convert2Hex()
 
-    //   if ((ieee64.DispStr !== "") && (ieee32.DispStr !== ""))
-    //     obj.entered.value = ieee64.DispStr
-    //   else
-    //     obj.entered.value = input * 1.0
     let binStr = ieee32.BinString;
     let sign_bit = binStr[0];
     let exp_bit = binStr.substring(1, 9);

@@ -39,8 +39,6 @@ const Operations = () => {
         setVal1(e.target.value)
     }
 
-    const closeResultModal = () => showResults(false);
-
     const submit = (event) => {
         let value1 = (format === "ieee754") ? `${iee754Val1.sign}|${iee754Val1.exp}|${iee754Val1.mantissa}` : val1;
         let value2 = (format === "ieee754") ? `${iee754Val2.sign}|${iee754Val2.exp}|${iee754Val2.mantissa}` : val2;
