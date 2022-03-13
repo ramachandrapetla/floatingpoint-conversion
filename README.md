@@ -2,6 +2,9 @@
 
 This is a project assignment as part of my Software Engineering lifecycle course
 
+<img width="1436" alt="Screen Shot 2022-03-12 at 6 39 33 PM" src="https://user-images.githubusercontent.com/23059307/158039919-4c247330-1814-4ac2-9437-edb158dc5466.png">
+
+
 Application files can be found in the following repository [https://github.com/ramachandrapetla/floatingpoint-conversion]
 
 This application is hosted in Netlify. You can view it here [https://frosty-spence-b0d37e.netlify.app/]
