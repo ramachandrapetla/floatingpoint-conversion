@@ -2,8 +2,15 @@
 
 This is a project assignment as part of my Software Engineering lifecycle course
 
+Application files can be found in the following repository [https://github.com/ramachandrapetla/floatingpoint-conversion]
+
+This application is hosted in Netlify. You can view it here [https://frosty-spence-b0d37e.netlify.app/]
 
 ## Getting Started with App
+
+### `npm install`
+
+Installs the dependencies required to run the application.
 
 ### `npm start`
 
@@ -21,8 +28,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
+### `npm test`
+
+Launches the test runner in the interactive watch mode.
+
 =================================================================
-Project Assignment
+
+### `Project Assignment`
 
 Create an application tool for a user to handle IEEE 754 floating point numbers (Refer to the specification from 1985 and the Project PPT shown in class).
 
